@@ -94,17 +94,19 @@ Now, if the coefficient of x is negative, then we can say that the relationship 
 Regression Coefficient Negative Relation
 Here, if the value of x increases, the value of y decreases.
 
+
 ## How does multicollinearity affect the linear regression?
 
 Multicollinearity occurs when some of the independent variables are highly correlated (positively or negatively) with each other. This causes a problem, as it is against the basic assumption of linear regression. The presence of multicollinearity does not affect the predictive capability of the model. So, if you just want predictions, the presence of multicollinearity does not affect your output. However, if you want to draw some insights from the model and apply them in, let’s say, some business model, it may cause problems.
 One of the major problems caused by multicollinearity is that it leads to incorrect interpretations and offers wrong insights. The coefficients of linear regression suggest the mean change in the target value if a feature is changed by one unit. So, if multicollinearity exists, this does not hold true, as changing one feature will lead to changes in the correlated variable and consequent changes in the target variable. This leads to wrong insights and can produce hazardous results for a business.
+
 **A highly effective way of dealing with multicollinearity is the use of VIF (variance inflation factor). The higher the value of VIF for a feature, the more linearly correlated that feature is. Simply remove the feature with a very high VIF value and retrain the model on the remaining data set.
 
 
 Now, let us see how we can apply these concepts to build linear regression models. In the below given Python Linear Regression Examples, we will be building two machine learning models for simple and multiple linear regression. Let’s begin.
 
 
-Hands-on: Linear Regression Using Python Scikit learn Hands-on-: USA Housing Prices Dataset
+## Hands-on: Linear Regression Using Python Scikit learn Hands-on-: USA Housing Prices Dataset
 
 Environment: Python 3 and Jupyter Notebook
 Library: Pandas
