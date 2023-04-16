@@ -1,8 +1,43 @@
+# Linear regression
 Linear regression is a type of supervised learning algorithm, commonly used for predictive analysis. As the name suggests, linear regression performs regression tasks. Now, what is regression? Well, regression is nothing but a technique that displays the relationship between two variables.
 We refer to dependent variables as responses and independent variables as features.
 In order to provide a basic understanding of linear regression, we start with the most basic version, i.e., simple linear regression.
 
-Simple Linear Regression:-
+## Important assumptions of Linear regression?
+
+Linear Regression is a useful statistical method one can use to understand the relationship between two variables, x and y 
+Before conduct linear regression one must first make sure that four assumptions are met:
+
+1. Linear relationship: There exists a linear relationship between the independent variable, x, and the dependent variable, y.
+2. Independence: The residuals are independent. In particular, there is no correlation between consecutive residuals in time series data.
+3. Homoscedasticity: The residuals have constant variance at every level of x.
+4. Normality: The residuals of the model are normally distributed.
+
+If one or more of these assumptions are violated, then the results of linear regression may be unreliable or even misleading
+
+## What is Heteroscedasticity / Non-Constant Variance?
+
+Also known as non-constant variance
+Heteroscedasticity refers to data for which the variance of the dependent variable is unequal across the range of independent variables. Heteroscedasticity is the opposite of homoscedasticity. The heteroscedasticity of data is important in the context of regression analysis. A regression model assumes a consistent variance, or homoscedasticity, across the data. 
+Heteroscedasticity in the data results in regression providing accurate outputs on one end of the data range but highly inaccurate outputs on the other end of the data. An easy way to visualize these concepts is to create a scatter plot of the data. A heteroscedastic data set will exhibit a conical shape across the range of independent variables. The wider the cone, the more heteroscedastic the data is and the less friendly for regression analysis. It is important to understand that a regression analysis on the data set is still possible but the results will prove unreliable outside of a specific range.
+
+## What are the implications?
+
+When heteroscedasticity is detected in the residuals from a model, it suggests that the model is misspecified (i.e., in some sense wrong). Possible causes of heteroscedasticity include:
+--Incorrectly assuming linear relationships in models
+--Incorrect distributional assumptions (e.g., using linear regression when Poisson regression would be appropriate)
+--Models that perform better for some subgroups than others (e.g., a model that performs well for women but poorly for men will exhibit heteroscedasticity)
+--The existence of autocorrelation means that the standard computations of standard errors, and consequently p-values, are misleading.
+
+## Fixes for heteroscedasticity:
+
+--The best solution for heteroscedasticity is to modify the model so that the problem disappears. For example:
+--Transform some of the numeric variables by taking their natural logarithms
+--Transform numeric predictor variables
+--Build separate models for different subgroups
+--Use models that explicitly model the difference in the variance (as opposed to just modeling the mean, which is what most models do)
+
+### Simple Linear Regression:-
 
 Simple linear regression is an approach for predicting a response using a single feature.
 It is assumed that the two variables are linearly related. Hence, we try to find a linear function that predicts the response value (y) as accurately as possible as a function of the feature or independent variable (x).
@@ -31,7 +66,8 @@ This is how linear regression works. Now, the question is how to find the best f
 
 Interested to learn Data Science? Check out this Data Science course in Chennai to get clear understanding.
 
-Linear Regression Line of Best Fit
+## Linear Regression Line of Best Fit
+
 The line of best fit is nothing but the line that best expresses the relationship between the data points. Let us see how to find the best fit line in linear regression.
 
 This is where the residual concept comes into the picture which is shown in the image below:
